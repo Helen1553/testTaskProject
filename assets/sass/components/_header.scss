@@ -1,0 +1,72 @@
+.header{
+    width: 100%;
+
+    .header__nav{
+        display: flex;
+        justify-content: space-around;
+
+        width: 98vw;
+        height: 7rem;
+        z-index: 1000;
+        top: 0;
+        border-bottom: 0.125rem solid $Orange_01;
+        background-color: $White_00;
+        position: fixed;
+
+        .nav__logo{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0.7rem;
+            text-decoration: none;
+
+            width: 15%;
+
+            &-icon{
+                height: 60%;
+            }
+
+            &-text{
+                margin-top: 2rem;
+                @include prata_regular_S;
+                text-transform: uppercase;
+
+                color: $Black_01;
+            }
+
+            a{
+                text-decoration: none;
+            }
+        }
+
+        .nav__menu{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+
+            width: 40%;
+            list-style-type: none;
+
+            &-information, &-services, &-contacts{
+                @include btn_header;
+
+                margin-top: 1rem;
+
+                color: $Grey_01;
+                font-size: 0.9rem;
+                text-decoration: none;
+                
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+    
+    .header__popup {
+        display: none;
+    }
+}

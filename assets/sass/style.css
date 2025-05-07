@@ -1,0 +1,248 @@
+@charset "UTF-8";
+:root {
+  --basic-font-weight: 400;
+  --title-font-weight: 600;
+  --primary-color: #292d32;
+  --secondary-color: #ffffff;
+}
+
+/* ----------- Цвета ----------- */
+/* ----------- Стили шрифтов ----------- */
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial_Regular.eot");
+  src: local("Arial Regular"), local("Arial_Regular"), url("../fonts/Arial_Regular.woff2") format("woff2"), url("../fonts/Arial_Regular.woff") format("woff"), url("../fonts/Arial_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arial";
+  src: url("../fonts/Arial_Bold.eot");
+  src: local("Arial Bold"), local("Arial_Bold"), url("../fonts/Arial_Bold.woff2") format("woff2"), url("../fonts/Arial_Bold.woff") format("woff"), url("../fonts/Arial_Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prata";
+  src: url("../fonts/Prata-Regular.eot");
+  src: local("Prata Regular"), local("Prata_Regular"), url("../fonts/Prata_Regular.woff2") format("woff2"), url("../fonts/Prata_Regular.woff") format("woff"), url("../fonts/Prata_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Миксины на шрифт Arial из макета: */
+/* Arial- заголовки */
+/* служебный миксин */
+/* служебный миксин */
+/* Arial - италик */
+/* служебный миксин */
+/* Миксины на шрифт Prata из макета: */
+/* Prata - заголовки */
+/* служебный миксин */
+/* ----------- Стили кнопок и ссылок ----------- */
+/* разные настройки размеров кнопок */
+.body {
+  display: grid;
+  grid-template: 5% 1fr 5%/8% 1fr 10%;
+  height: 2100px;
+  width: 98vw;
+}
+.body .header {
+  grid-area: 1/1/2/4;
+}
+.body .main {
+  grid-area: 2/1/3/4;
+}
+.body .footer {
+  grid-area: 3/2/4/3;
+}
+
+.header {
+  width: 100%;
+}
+.header .header__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 98vw;
+  height: 7rem;
+  z-index: 1000;
+  top: 0;
+  border-bottom: 0.125rem solid #d78131;
+  background-color: #ffffff;
+  position: fixed;
+}
+.header .header__nav .nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  width: 15%;
+}
+.header .header__nav .nav__logo-icon {
+  height: 60%;
+}
+.header .header__nav .nav__logo-text {
+  margin-top: 2rem;
+  font-family: "Prata";
+  font-weight: var(--title-font-weight);
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  line-height: 133%;
+  text-transform: uppercase;
+  color: #282829;
+}
+.header .header__nav .nav__logo a {
+  text-decoration: none;
+}
+.header .header__nav .nav__menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  list-style-type: none;
+}
+.header .header__nav .nav__menu-information, .header .header__nav .nav__menu-services, .header .header__nav .nav__menu-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-family: "Arial";
+  font-weight: var(--basic-font-weight);
+  color: var(--primary-color);
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: 130%;
+  text-transform: uppercase;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  color: #292d32;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.header .header__nav .nav__menu-information:hover, .header .header__nav .nav__menu-services:hover, .header .header__nav .nav__menu-contacts:hover {
+  background-color: #d78131;
+  border: #d5c9be;
+  color: #ffffff;
+  transition: 0.2s ease-out;
+}
+.header .header__nav .nav__menu-information:active, .header .header__nav .nav__menu-services:active, .header .header__nav .nav__menu-contacts:active {
+  background-color: #975b23;
+}
+.header .burger {
+  display: none;
+}
+.header .header__popup {
+  display: none;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+}
+.main .main__block1 {
+  height: 38%;
+  width: 100%;
+  display: flex;
+}
+.main .main__block1 .main__block1-left {
+  height: 100%;
+  width: 54%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rem;
+}
+.main .main__block1 .main__block1-left .main__block1-left-title {
+  font-family: "Prata";
+  font-weight: var(--title-font-weight);
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  line-height: 200%;
+  text-transform: uppercase;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-title {
+  font-family: "Arial";
+  font-weight: var(--title-font-weight);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-text .inf-text-argument {
+  display: flex;
+  gap: 2rem;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-text .inf-text-argument img {
+  margin-top: 0.3rem;
+  height: 4rem;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-btn {
+  border: none;
+  box-sizing: border-box;
+  height: 3.8rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  transition: 0.2s ease-out;
+  font-family: "Arial";
+  font-weight: var(--basic-font-weight);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  line-height: 133%;
+  font-weight: bold;
+  background-color: rgba(56, 57, 59, 0.2235294118);
+  color: #282829;
+  cursor: pointer;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-btn:hover {
+  background-color: #292d32;
+  color: #ffffff;
+  transition: 0.2s ease-out;
+}
+.main .main__block1 .main__block1-left .main__block1-left-inf .inf-btn:active {
+  background-color: #975b23;
+}
+.main .main__block1 .text {
+  font-family: "Arial";
+  font-weight: var(--basic-font-weight);
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  line-height: 133%;
+}
+.main .main__block1 .main__block1-right {
+  height: 100%;
+  width: 46%;
+}
+.main .main__block1 .main__block1-right img {
+  height: 100%;
+  width: 100%;
+}
+.main .main__block2 {
+  height: 27%;
+  width: 100%;
+}
+.main .main__block3 {
+  height: 23%;
+  width: 100%;
+}
+
+.footer {
+  height: 17rem;
+  border: solid blue;
+}/*# sourceMappingURL=style.css.map */
