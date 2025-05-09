@@ -5,11 +5,13 @@
         display: flex;
         justify-content: space-around;
 
-        width: 98vw;
+        width: 100vw;
         height: 7rem;
         z-index: 1000;
         top: 0;
-        border-bottom: 0.125rem solid $Orange_01;
+        left: 0;
+        
+        border-bottom: 0.125rem solid $Orange_00;
         background-color: $White_00;
         position: fixed;
 
@@ -28,11 +30,8 @@
             }
 
             &-text{
+                @include logo;
                 margin-top: 2rem;
-                @include prata_regular_S;
-                text-transform: uppercase;
-
-                color: $Black_01;
             }
 
             a{

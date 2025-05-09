@@ -3,17 +3,20 @@
     
     display: flex;
     flex-direction: column;
-    gap: 6.25rem;
+    gap: 4.5rem;
+
     
     .main__block1{
+        display: flex;
+        
         height: 38%;
         width: 100%;
-
-        display: flex;
+        
+        background-color: var(--secondary-color);
 
         .main__block1-left{
             height: 100%;
-            width: 54%;
+            width: 55%;
 
             display: flex;
             flex-direction: column;
@@ -37,45 +40,261 @@
                 .inf-text{
                     .inf-text-argument{
                         display: flex;
-                        gap: 2rem;
+                        gap: 1.5rem;
 
                         img{
                             margin-top: 0.3rem;
-                            height: 4rem;
+                            height: 3.5rem;
                         }
+
                     }
                 }
 
                 .inf-btn{
                     border: none;
-                    @include btn_order;
+                    @include btn_contact;
                 }
             }
         }
 
-        .text{
-            @include arial_regular_S;
-        }
-
         .main__block1-right{
             height: 100%;
-            width: 46%;
+            width: 45%;
 
             img{
-                height: 100%;
-                width: 100%;
+                height: 90%;
+                width: 85%;
+                padding: 2rem;
             }
         }
     }
     
 
     .main__block2{
+        display: flex;
+
         height: 27%;
         width: 100%;
+
+        .main__block2-leftImg{
+            height: 100%;
+            width: 32%;
+
+            img{
+                height: 100%;
+                width: 99%;
+                border: solid $Grey_00;
+            }
+        }
+
+        .main__block2-central{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 36%;
+            
+            .main__block2-central-service{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+
+                height: 21%;
+                width: 100%;
+
+                border-bottom: solid $Grey_00;
+
+                img{
+                    padding-top: 1.3rem;
+                    width: 20%;
+                    height: 50%;
+                }
+            }
+
+            .main__block2-central-service_last{
+                display: flex;
+                flex-direction: column;
+
+                height: 34%;
+                width: 100%;
+
+                .service_last-text{
+                    display: flex;
+                    align-content: center;
+                    
+                    .service{
+                        width: 40%;
+                    }
+
+                    p{
+                        padding-top: 1.1rem;
+                        height: 70%;
+                    }
+                }
+
+                img{
+                    padding: 1.3rem 0 0 0.7rem;
+                    width: 16%;
+                    height: 50%;
+                }
+
+                .service_last-btn{
+                    @include btn_contact2;
+                    margin: 0 auto;
+                }
+            }
+
+            .central_service-text{
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                ul,p{
+                    padding: 0.5rem 0 0 2.5rem;
+                    height: 70%;
+                    width: fit-content;
+
+                    font-family: Arial;
+                    font-size: 1rem;
+                    line-height: 133%;
+
+                    color: $White_00;
+                }
+
+                .service{
+                    @include arial_regular_S;
+                    font-size: 1.2rem;
+                    padding-left: 1rem;
+                    text-align: center;
+                    width: 30%;
+
+                    color: $White_00;
+                }
+            }
+        }
+
+        .main__block2-rightImg{
+            height: 100%;
+            width: 32%;
+
+            img{
+                height: 100%;
+                width: 99%;
+                border: solid $Grey_00;
+            }
+        }
     }
 
     .main__block3{
-        height: 23%;
+        height: 28%;
         width: 100%;
+
+        .main__block3-container{
+            display: flex;
+            margin: 0 auto;
+
+            height: 85%;
+            width: 85%;
+            border-radius: 1.5rem;
+
+            background-color: var(--secondary-color);
+
+            .main__block3-left{
+                display: flex;
+                flex-direction: column;
+
+                width: 60%;
+
+                .main__block3-left-text{
+                    height: 10%;
+
+                    @include prata_regular_L;
+                    font-size: 1.5rem;
+                    
+                    text-align: center;
+                    text-decoration: underline;
+                }
+
+                .main__block3-left-form{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1.2rem;
+
+                    height: 70%;
+
+                    .form__input{
+                        box-sizing: border-box;
+                        margin-left: 1rem;
+                        padding: 1rem;
+
+                        height: 3.8rem;
+                        width: calc(100% - 2rem);
+
+                        border: solid $Grey_00;
+                        border-radius: 0.3rem;
+
+                        font-size: 1rem;
+                        color: var(--primary-color);
+                        outline: none;
+
+                        &:focus {
+                            border: 0.1rem solid $Orange_01;
+                            background: $White_00;
+                        }
+                    }
+
+                    .form__checkbox{
+                        display: flex;
+                        gap: 0.5rem;
+
+                        margin-left: 1rem;
+                        width: fit-content;
+                        
+                        input{
+                            cursor: pointer;
+                        }
+
+                        label{
+                            @include arial_regular_S;
+                            font-size: 0.9rem;
+                        }
+                    }
+                }
+
+                .main__block3-left-btn{
+                    @include btn_contact;
+                    margin: 0 auto;
+                    margin-bottom: 0.5rem;
+                    
+                    width: 40%;
+
+                    &:hover{
+                        background-color: $Orange_01;
+                        transition: 0.3s ease-out;
+                    }
+
+                    &:active{
+                        background-color: $Orange_02;
+                    }
+                }
+
+            }
+
+            .main__block3-right{
+                width: 40%;
+
+                background-image: url(/assets/images/main/main_block3/img_hachiko.png);
+                background-repeat: no-repeat;
+                background-position: 48rem;
+                background-attachment: fixed;
+                background-size: contain;
+                border-top-right-radius: 1.5rem;
+                border-bottom-right-radius: 1.5rem;
+            }
+        }
+    }
+
+    .text{
+        @include arial_regular_S;
     }
 }

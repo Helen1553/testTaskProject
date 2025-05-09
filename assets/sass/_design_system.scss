@@ -80,7 +80,7 @@ $White_00: #ffffff;
 
 @mixin arial_regular_S{
     @include title_Arial_regular_S;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 133%;
 }
 
@@ -119,26 +119,27 @@ $White_00: #ffffff;
 
 @mixin prata_regular_S{
     @include title_Prata_regular;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 133%;
 }
 
 /* ----------- Стили кнопок и ссылок ----------- */
 
 /* разные настройки размеров кнопок */
-@mixin btn_order {
+@mixin btn_contact {
     box-sizing: border-box;
     height: 3.8rem;
     width: fit-content;
     padding: 1rem;
     
     border-radius: 0.2rem;
-    transition: 0.2s ease-out;
+    border: none;
+
     @include arial_regular_S;
     font-weight: bold;
-
     background-color: $Grey_02;
     color: $Black_01;
+    transition: 0.2s ease-out;
     cursor: pointer;
 
     &:hover{
@@ -150,6 +151,34 @@ $White_00: #ffffff;
 
     &:active{
         background-color: $Orange_02;
+    }
+}
+
+@mixin btn_contact2 {
+    box-sizing: border-box;
+    height: 3.8rem;
+    width: fit-content;
+    padding: 1rem;
+    
+    border-radius: 0.2rem;
+    border: none;
+
+    @include arial_regular_S;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: 0.2s ease-out;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $Orange_02;
+        color: $White_00;
+
+        transition: 0.2s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_01;
     }
 }
 
@@ -178,6 +207,12 @@ $White_00: #ffffff;
     &:active{
         background-color: $Orange_02;
     }
+}
+
+/* ----------- Логотип ----------- */
+@mixin logo{
+    @include prata_regular_L;
+    text-transform: uppercase;
 }
 
 
