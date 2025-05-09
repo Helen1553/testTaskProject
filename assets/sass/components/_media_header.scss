@@ -1,0 +1,168 @@
+@media screen and (min-width: 1440px) and (max-width: 2560px){
+    .header{
+        .header__nav{
+            .nav__logo{
+                gap: 0.6rem;
+                width: 20%;
+
+                &-icon{
+                    height: 60%;
+                    padding-top: 0;
+                }
+    
+                &-text{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 767px){
+    .header{
+        .header__nav{
+            justify-content: space-between;
+
+            .nav__logo{
+                margin-left: 0.5rem;
+                gap: 0.4rem;
+                width: 30%;
+
+                &-icon{
+                    height: 40%;
+                    padding-top: 0.2rem;
+                }
+    
+                &-text{
+                    margin-top: 2rem;
+                }
+            }
+    
+            .nav__menu{
+                text-align: center;
+    
+                width: 55%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px){
+    .header{
+        .header__nav{
+            justify-content: space-between;
+            height: 8rem;
+
+            .nav__logo{
+                text-decoration: none;
+                gap: 0.2rem;
+    
+                width: 50%;
+    
+                &-icon{
+                    padding-top: 0.9rem;
+                    height: 40%;
+                }
+
+                &-text{
+                    margin-top: 3rem;
+                }
+            }
+    
+            .nav__menu{
+                display: none;
+            }
+
+            .burger{
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                padding-top: 1.9rem;
+
+                .burger-menu{
+                    cursor: pointer;
+                }
+    
+                .line{
+                    display: block;
+                    margin: 0.25rem auto;
+    
+                    width: 1.5rem;
+                    height: 0.15rem;
+                    background-color: $Black_00;
+                    transition: 0.3s;
+                }
+            }
+        }
+        .header__popup {
+            display: flex;
+            position: fixed;
+            top: 8rem;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+    
+            background-color: $White_00;
+            border-top: 0.1rem solid $Orange_00;
+            transition: 0.4s;
+        }
+    
+        .header__popup.open {
+            right: 0;
+        }
+        
+        .header__popup .nav__menu {
+            width: 100%;
+            height: 100%;
+    
+            padding: 3.125rem 0;
+            overflow: auto;
+        }
+        
+        .header__popup .nav__menu > li {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .header__popup .nav__menu > li > a {
+            @include btn_header;
+            margin-bottom: 3rem;
+    
+            font-size: 1.1rem;
+            color: $Grey_01;
+            text-decoration: none;
+        }
+        
+        .header__popup .nav__menu > li > a:hover {
+            background-color: $Orange_01;
+            color: $White_00;
+            transition: background-color 0.2s;
+        }
+    
+        .header__popup .nav__menu > li > a:active{
+            background-color: $Orange_02;
+            color: $White_00;
+        }
+    
+        // Для эффекта анимации --> превращение бургера в крестик
+        .burger-menu.active .line:nth-child(1) {
+            transform: translateY(0.35rem) rotate(45deg);
+        }
+        .burger-menu.active .line:nth-child(2) {
+            opacity: 0;
+        }
+        .burger-menu.active .line:nth-child(3) {
+            transform: translateY(-0.5rem) rotate(-45deg);
+        }
+        
+        body.noscroll {
+            overflow: hidden;
+        }
+    }
+}
+

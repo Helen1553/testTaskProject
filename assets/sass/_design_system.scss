@@ -69,6 +69,10 @@ $White_00: #ffffff;
     @include title_Arial_regular_L;
     font-size: 1.5rem;
     line-height: 150%;
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1.3rem;
+    }
 }
 
 /* служебный миксин */
@@ -82,6 +86,9 @@ $White_00: #ffffff;
     @include title_Arial_regular_S;
     font-size: 1.1rem;
     line-height: 133%;
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1rem;
+    }
 }
 
 /* Arial - италик */
@@ -98,6 +105,13 @@ $White_00: #ffffff;
     font-size: 0.8rem;
     line-height: 130%;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1840px) and (max-width: 2560px){
+        font-size: 1.3rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 0.7rem;
+    }
 }
 
 /* Миксины на шрифт Prata из макета: */
@@ -115,6 +129,13 @@ $White_00: #ffffff;
     font-size: 1.3rem;
     line-height: 200%;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1840px) and (max-width: 2560px){
+        font-size: 2rem;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px){
+        font-size: 1rem;
+    }
 }
 
 @mixin prata_regular_S{
@@ -126,6 +147,37 @@ $White_00: #ffffff;
 /* ----------- Стили кнопок и ссылок ----------- */
 
 /* разные настройки размеров кнопок */
+@mixin btn_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    height: 2.5rem;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+
+    @include arial_italic;
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $Orange_01;
+        border: $Orange_00;
+        color: $White_00;
+
+        transition: 0.2s ease-out;
+    }
+
+    &:active{
+        background-color: $Orange_02;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 374px){
+        padding: 0.3rem 0.8rem;
+    }
+}
+
 @mixin btn_contact {
     box-sizing: border-box;
     height: 3.8rem;
@@ -179,33 +231,6 @@ $White_00: #ffffff;
 
     &:active{
         background-color: $Orange_01;
-    }
-}
-
-@mixin btn_header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-sizing: border-box;
-    height: 2.5rem;
-    width: fit-content;
-    padding: 0.5rem 1rem;
-
-    @include arial_italic;
-    border-radius: 1.5rem;
-    cursor: pointer;
-
-    &:hover{
-        background-color: $Orange_01;
-        border: $Orange_00;
-        color: $White_00;
-
-        transition: 0.2s ease-out;
-    }
-
-    &:active{
-        background-color: $Orange_02;
     }
 }
 
