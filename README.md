@@ -13,7 +13,7 @@ One of the conditions of the assignment was to completely change the graphic des
 The project is based on the Figma graphic editor.
 The project is based on html5, css3, and js.
 
-The project architecture is built using the Sass preprocessor
+The project architecture is built using the Sass preprocessor (see the develop branch)
 
 The website is compatible with different browsers (it opens correctly in Google Chrome, Microsoft Edge, Opera, and Safari).
 The website is adapted to work on various devices (desktop, tablet, mobile):
