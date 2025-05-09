@@ -10,13 +10,13 @@ One of the conditions of the assignment was to completely change the graphic des
 ## Project structure:
 ### The website is a one-page landing, which contains 3 information blocks about the company: "About us", "What we Do" and "Contacts".
 
-### The project is based on the Figma graphic editor.
-### The project is based on html5, css3, and js.
+The project is based on the Figma graphic editor.
+The project is based on html5, css3, and js.
 
-### The project architecture is built using the Sass preprocessor
+The project architecture is built using the Sass preprocessor
 
-### The website is compatible with different browsers (it opens correctly in Google Chrome, Microsoft Edge, Opera, and Safari).
-### The website is adapted to work on various devices (desktop, tablet, mobile):
+The website is compatible with different browsers (it opens correctly in Google Chrome, Microsoft Edge, Opera, and Safari).
+The website is adapted to work on various devices (desktop, tablet, mobile):
 
 #### Desktop version:
 ![image](./assets/images/readme/img_first.jpg)
