@@ -1,6 +1,6 @@
 # This is a test project, which aims to create a website using a design from the Figma graphic design tool.
 
-One of the conditions of the assignment was to completely change the graphic design of the layout: replace text, images and colors at your discretion, using imagination and artificial intelligence capabilities.
+One of the conditions of the assignment was to completely change the graphic design of the layout: replace text, images and colors at my discretion, using imagination and artificial intelligence capabilities.
 <br>
 
 ## The final project is the PetHome website.
