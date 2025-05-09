@@ -1,3 +1,4 @@
+// Медиазапросы для хедера
 @media screen and (min-width: 1440px) and (max-width: 2560px){
     .header{
         .header__nav{
@@ -92,7 +93,7 @@
     
                     width: 1.5rem;
                     height: 0.15rem;
-                    background-color: $Black_00;
+                    background-color: $Grey_01;
                     transition: 0.3s;
                 }
             }

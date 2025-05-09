@@ -1,3 +1,4 @@
+// Стили для основной части сайта
 .main{
     width: 100%;
     
@@ -5,7 +6,7 @@
     flex-direction: column;
     gap: 4.5rem;
 
-    
+// Стили для 1-ого блока main
     .main__block1{
         display: flex;
         
@@ -69,7 +70,7 @@
         }
     }
     
-
+    // Стили для 2-ого блока main
     .main__block2{
         display: flex;
 
@@ -184,6 +185,7 @@
         }
     }
 
+    // Стили для 3-ого блока main
     .main__block3{
         height: 28%;
         width: 100%;

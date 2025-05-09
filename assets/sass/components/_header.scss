@@ -1,3 +1,4 @@
+// Стили для хедера сайта
 .header{
     width: 100%;
 
@@ -49,7 +50,7 @@
             list-style-type: none;
 
             &-information, &-services, &-contacts{
-                @include btn_header;
+                @include btn_nav;
 
                 margin-top: 1rem;
 
@@ -67,5 +68,16 @@
     
     .header__popup {
         display: none;
+    }
+}
+
+/* Код для затемнение фона при прокрутке страницы*/
+.header__nav.scrolled {
+    background-color: $Black_00;
+    border:none;
+
+    &:hover{
+        background-color: $White_00;
+        transition: 0.3s ease-out;
     }
 }

@@ -8,12 +8,9 @@
 }
 
 /* ----------- Цвета ----------- */
-$Black_00: #222222;
-$Black_01: #282829;
-$Blue_00: #38535D;
+$Black_00: #2222222b;
 $Grey_00: #d6d6d6;
 $Grey_01: #292d32;
-$Grey_02: #38393b39;
 $Orange_00: #d5c9be;
 $Orange_01: #d78131;
 $Orange_02: #975b23;
@@ -30,17 +27,6 @@ $White_00: #ffffff;
         url('../fonts/Arial_Regular.woff') format('woff'),
         url('../fonts/Arial_Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Arial';
-    src: url('../fonts/Arial_Bold.eot');
-    src: local('Arial Bold'), local('Arial_Bold'),
-        url('../fonts/Arial_Bold.woff2') format('woff2'),
-        url('../fonts/Arial_Bold.woff') format('woff'),
-        url('../fonts/Arial_Bold.ttf') format('truetype');
-    font-weight: 700;
     font-style: normal;
 }
 
@@ -86,6 +72,7 @@ $White_00: #ffffff;
     @include title_Arial_regular_S;
     font-size: 1.1rem;
     line-height: 133%;
+
     @media screen and (min-width: 320px) and (max-width: 767px){
         font-size: 1rem;
     }
@@ -138,16 +125,11 @@ $White_00: #ffffff;
     }
 }
 
-@mixin prata_regular_S{
-    @include title_Prata_regular;
-    font-size: 1.1rem;
-    line-height: 133%;
-}
-
 /* ----------- Стили кнопок и ссылок ----------- */
 
 /* разные настройки размеров кнопок */
-@mixin btn_header {
+/* для навигации в хедере и в футере */
+@mixin btn_nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,6 +160,7 @@ $White_00: #ffffff;
     }
 }
 
+/* для кнопок секций main */
 @mixin btn_contact {
     box-sizing: border-box;
     height: 3.8rem;
@@ -206,6 +189,7 @@ $White_00: #ffffff;
     }
 }
 
+/* для кнопок секций main */
 @mixin btn_contact2 {
     box-sizing: border-box;
     height: 3.8rem;

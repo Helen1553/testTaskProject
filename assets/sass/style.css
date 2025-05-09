@@ -171,6 +171,16 @@
   display: none;
 }
 
+/* Код для затемнение фона при прокрутке страницы*/
+.header__nav.scrolled {
+  background-color: rgba(34, 34, 34, 0.168627451);
+  border: none;
+}
+.header__nav.scrolled:hover {
+  background-color: #ffffff;
+  transition: 0.3s ease-out;
+}
+
 .main {
   width: 100%;
   display: flex;
@@ -783,7 +793,7 @@
     margin: 0.25rem auto;
     width: 1.5rem;
     height: 0.15rem;
-    background-color: #222222;
+    background-color: #292d32;
     transition: 0.3s;
   }
   .header .header__popup {
